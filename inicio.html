@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STILO & BELEZA LT</title>
 <link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+<script src="/js/jquery-3.7.1.min.js" defer></script>
+<script src="/js/popper.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
 </head>
-<body>
+<body style="background-color: #FF00FF;">
+
+
     <h2>Stilo & Belleza LT</h2>
     
-       <div id="nav">   
+       <!-- <div id="nav">   
         <ul  id="menu">
             <li>  <img src="/logo.png" alt="" class="menu-icono" width="120" height="100px">
             </li>
@@ -20,148 +26,281 @@
             <li><a href="#formulario">Registro</a></li>
         </ul>
        </div>
-        <br>
+        <br> -->
+          <!-- Barra de navegacion  con clase de bootrasp para el diseño  y expancion-->
 
-        <h1><a id="inicio">STILO & BELLEZA LT</a></h1>
-        <br>
-        
+          <nav class="navbar navbar-expand-lg" style="background-color:#b60087;">
+            <!-- Contenedor fluido para ajustar el contenido de la barra de navegacion -->
+             <div class="container-fluid" id="menu">
+            <!-- Marca o logotipo que aparece en la barra de navegacion -->
+             <a class="navbar-brand" href="#menu">MENU</a> 
+             <!-- Boton que aparece en pantallas pequeñas para colapsar y expandir el menú -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenedor colapsable que contiene los elementos de navegacion -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- Lista de elementos de navegacion -->
+                     <ul class="navbar-nav">
+                        <!-- Elemento de navegacion: enlace a una pagina de inicio -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"  href="#inicio">Inicio</a>
+                        </li>
+                        <!-- Elemento de navegacion: enlace a una pagina de imagenes -->
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#imagenes">Imagenes</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#sitios">Sitios Interes</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#contactanos">Contactanos</a>
+                        </li>
+                         
+                     </ul>
+                </div>
+             </div>
+                       <!-- Modal(popup) o ventana emergente -->
+      <!-- Botón para disparar (trigger) la ventana Modal  -->
+
+       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ejemplomodal" >Ingreso</button>
+       
+       <!-- contenedor principal   que tiene la clase modal y otras propiedades bootstrap  -->
+        <div class="modal" id="ejemplomodal" tabindex="-1" aria-labelledby="ejemplomodal" aria-hidden="true">
+
+         <!-- contenedor para centrar el contenido en la pantalla -->
+            <div class="modal-dialog">
+                <!-- cotenetenor que envuelve el contenido de la modal (cabecera,cuerpo y pie) -->
+                <div class="modal-content">
+                    <!-- cabecera del modal de incluye y el boton de cierre -->
+                    <div class="modal-header">
+                        <!-- titulo del modal con estilo -->
+                         <h1 class="modal-title" id="ejemplomodallabel">Inicio Sesión</h1>
+                         <button type="button" class="btn btn-close" data-bs-toggle="modal" aria-label="cerrar"></button>
+
+                    </div>
+                    <!-- area donde  se coloca en contenido principla del modal  -->
+                        <div class="modal-body">
+                            <!-- colocar contenido  -->
+
+                        </div>
+                        <!-- sección final del modal -->
+                        <div class="modal-body">
+                            <!-- colocar contenido  -->
+                            <div>
+                                <h2><a id="formulario">Inicio de sesión:</a></h2>
+                                <form>
+                                    USUARIO: <br>
+                                    <input type="text" name="usuario"  maxlength="10" > <br>
+                                   
+                                    Contraseña  <br>
+                                    <input type="password" name="contraseña" > <br>
+                                    <button type="button"class="btn btn-info" data-bs-dismiss="modal"><a href="#">INICIO</a></button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- colocar contenido  -->
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cierre</button>
+
+                        </div>
+                </div>
+             </div>
+    </div>
+       
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">REGISTRO</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Regristro</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="registro" class="registro">
+                <h2><a id="formulario">REGISTRO:</a></h2>
+                <form>
+                    Id: <br>
+                    <input type="text" name="id" value="id" disabled=""> <br>
+                    Nombre: <br>
+                    <input type="text" name="nombre"  maxlength="10" > <br>
+                    Apellido: <br>
+                    <input type="text" name="apellido" > <br>
+                    Email:  <br>
+                    <input type="text" name="email" > <br>
+                    Telefono:   <br>
+                    <input type="text" name="telefono" > <br>   
             
+                        </select>  
+                        <br>
+                    Descripción: <br>
+                    <textarea name="descripcióm"  rows="5" cols="40"></textarea> <br><br>
+                    selecione un sexo: <br><br>
+                    <input type="radio" name="sexo" value="masculino ">masculino
+                    <input type="radio" name="sexo" value="femenino ">femenino
+                    <input type="radio" name="sexo" value="otro ">otro
+                    <br><br>
+                     <button type="button"class="btn btn-info" data-bs-dismiss="modal"><a href="#">Exito</a></button>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cierre</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </nav>
+       
+        <a id="inicio"></a>
+        <br>
     <header class="principal">
-        <br><br>
-        
-        <img src="ropa.jpg"class="foto">
+        <div class="row g-0  position-relative" class="foto">
+            <div class="col-md-6 mb-md-0 p-md-4">
+              <img src="./img/este.jpg" class="foto">
+            </div>
+            <div class="col-md-6 p-4 ps-md-0">
+              <h5 class="mt-0">STILO & BELLEZA LT</h5>
+              <br><br><br><br>  
+              <p><b>Stilo & Belleza LT es una tienda que ofrece una amplia variedad de productos para satisfacer todos los gustos y necesidades. Desde ropa y accesorios hasta lencería y artículos para el hogar. Si buscas renovar tu armario, encontrar el regalo perfecto o simplemente explorar nuevas opciones, Stilo & Belleza LT es el lugar ideal para ti.</b></p>
+
+              <button type="button" class="btn btn-light"><a href="#" class="stretched-link">Ver mas </a></button>
+              
+            </div>
+          </div> 
+      </header>
+  </div>
+<div>
+  <br><br><br><br><br>
+  <a href="#menu">
+    <h1><a id="imagenes">IMAGENES:</a></h1>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-70">
+          <img src="./img/11.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">DAMAS:</h5>
+            <p class="card-text">Ven y conoce Más</p>
+            <button type="button" class="btn btn-light"><a href="dama.html" class="stretched-link">link</a></button>
+              
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-70">
+          <img src="./img/5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CABALLEROS:</h5>
+            <p class="card-text">Ven y conoce Más</p>
+            <button type="button" class="btn btn-light"><a href="hombre.html" class="stretched-link">link</a></button>
+          </div>
+        </div>  
+      </div>
+      <div class="col">
+        <div class="card h-70">
+          <img src="./img/23.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HOGAR:</h5>
+            <p class="card-text">Conoce Más</p>
+            <button type="button" class="btn btn-light"><a href="hogar.html" class="stretched-link">link</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-70">
+          <img src="./img/h.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ACCESORIOS</h5>
+            <p class="card-text">Conoce Más</p>
+            <button type="button" class="btn btn-light"><a href="accesosrios.html" class="stretched-link">link</a></button>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+  
+
+          <a href="#menu">
+        <h1><a id="nosotros">NOSOTROS:</a></h1>
+
+<!-- Card de servicios  -->
+<section id="servicios" style="background-color:  #b60087; padding: 50px;">
+  <div class="container">
+     <div class="row">
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+           <div class="card h-100 bg-light">
+              <img src="./img/mision.jpg" class="card-img-top" >
+              <div class="card-body">
+                 <h3 class="card-title">MISION</h3>
+                 <p class="card-text text-dark">En STILO & BELLEZA LT,empoderamos a nuestros clientes a expresar su estilo único y sentirse seguros en su propia piel.A través de nuestras prendas y accesorios cuidadosamente seleccionados,ofrecemos una experiencia de compra que inspira confianza y creatividad.</p>
+              </div>
+           </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+           <div class="card h-100 bg-light">
+              <img src="./img/vision (1).jpg" class="card-img-top">
+              <div class="card-body">
+                 <h3 class="card-title">VISION</h3>
+                 <p class="card-text text-dark">Ser la marca de referencia en la industria de la moda, ofreciendo una experiencia de compra inigualable y personalizada, donde nuestros clientes se sientan valorados y atendidos en cada interacción.</p>
+              </div>
+           </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+           <div class="card h-100  bg-light" >
+              <img src="./img/valores.jpg" class="card-img-top" alt="Retoques de punto">
+              <div class="card-body">
+                 <h3 class="card-title">VALORES</h3>
+                 <p class="card-text text-dark"><ul>
+                  <li><b>Calidad:</b>Compromiso con la excelencia en todos los aspectos del negocio, desde la selección de materiales hasta el servicio al cliente.</li> 
+                  <li><b>Innovación:</b>Búsqueda constante de nuevas tendencias y tecnologías para ofrecer productos y experiencias únicas.</li>
+                  <li> <b>Sostenibilidad:</b>Respeto por el medio ambiente y compromiso con prácticas de producción y consumo responsables.</li>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
 
       <br><br>
-      <p><a href="#menu"></a>Stilo & Belleza LT es una tienda que ofrece una amplia variedad de productos para satisfacer todos los gustos y necesidades. Desde ropa y accesorios hasta lencería y artículos para el hogar. Si buscas renovar tu armario, encontrar el regalo perfecto o simplemente explorar nuevas opciones, Stilo & Belleza LT es el lugar ideal para ti. </p>
-    </header>
-</div>
-
-    <br><br>
-        <div>
-            <h1><a id="nosotros">NOSOTROS:</a></h1>
-            <br>
-
-            <p><a href="#menu"> 
-                <table class="tabla">
-
-                <tr>
-                    <th>MISION</th>
-                    <th>VISION</th>
-                    <th>VALORES</th>
-                </tr>
-                <tr>
-                    <td>En STILO & BELLEZA LT,empoderamos a nuestros clientes a expresar su estilo único y sentirse seguros en su propia piel.A través de nuestras prendas y accesorios cuidadosamente seleccionados,ofrecemos una experiencia de compra que inspira confianza y creatividad.<br> </td>
-                    <br>
-                    <td>Ser la marca de referencia en la industria de la moda, ofreciendo una experiencia de compra inigualable y personalizada, donde nuestros clientes se sientan valorados y atendidos en cada interacción.
-                    </td>
-
-                    <td> <li><b>Calidad:</b> Compromiso con la excelencia en todos los aspectos del negocio, desde la selección de materiales hasta el servicio al cliente.</li><br>
-                    <li><b>Innovación:</b> Búsqueda constante de nuevas tendencias y tecnologías para ofrecer productos y experiencias únicas.</li><br>
-                    <li><b>Sostenibilidad:</b> Respeto por el medio ambiente y compromiso con prácticas de producción y consumo responsables.</li><br>
-                    <li><b>Pasión: </b>Entusiasmo y amor por la moda y por lo que hacemos.</li><br>
-                    <li><b>Ética:</b> Integridad y transparencia en todas las relaciones comerciales.</li> <br>
-                    <li><b>Empoderamiento:</b> Fomento de la autoestima y la confianza en nuestros clientes.</li>
-                </td>
-                </tr>
-            </table>
-            <br>
+      <a href="#menu">
+        <h1><a id="sitios">SITIOS DE INTERES:</a></h1>
+      <br><br>
+      <div class="row g-0 bg-body-  position-relative" style="background-color:  #b60087;"">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7931.709850577325!2d-75.61989045184123!3d6.282794472522143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429fd94cf1b11%3A0xdf3ff5172339e012!2sMirador%20de%20la%20Cascada!5e0!3m2!1ses-419!2sco!4v1725633103245!5m2!1ses-419!2sco" width="550" height="500" style="border:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
         </div>
-        <div>
-
-            
-            <p><a href="#menu"></a></p>
-            
-            <h1><a id="productos">HOMBRE</a></h1>
-            <br><br>
-              
-                <img src="hombre.jpg"class="foto">
-               <img src="2.jpg"class="foto">
-                <img src="3.jpg"class="foto">
-                <img src="4.jpg"class="foto">
-                <img src="5.jpg"class="foto">
-                <img src="6.jpg"class="foto">
-                <img src="7.jpg"class="foto">
-                <img src="8.jpg"class="foto">
-                <br><br><br>
-
-                <h1><a id="productos">MUJER</a></h1>
-                <br><br>
-                  
-                  <img src="16.jpg"class="foto">
-                   <img src="9.jpg"class="foto">
-                    <img src="19.jpg"class="foto">
-                    <img src="11.jpg"class="foto">
-                    <img src="12.jpg" class="foto">
-                    <img src="17.jpg"class="foto">
-                    <img src="18.jpg"class="foto">
-                    <img src="15.jpg"class="foto">
-                    <br><br><br>
-
-                    <h1><a id="productos">HOGAR</a></h1>
-                    <br><br>
-                  
-                  <img src="hogar.jpg"class="foto">
-                   <img src="20.jpg"class="foto">
-                    <img src="22.jpg"class="foto">
-                    <img src="21.jpg"class="foto">
-                    <img src="23.jpg" class="foto">
-                    <img src="24.jpg"class="foto">
-                    <img src="25.jpg"class="foto">
-                    <img src="26.jpg"class="foto">
-                    <br><br><br>
-
-                    <h1><a id="productos">ACCESOSRIOS</a></h1>
-                    <br><br>
-                  <img src="27.jpg"class="foto">
-                   <img src="28.jpg"class="foto">
-                    <img src="29.jpg"class="foto">
-                    <img src="30.jpg"class="foto">
-                    <img src="31.jpg" class="foto">
-                    <img src="32.jpg"class="foto">
-                    <img src="33.jpg"class="foto">
-                    <img src="34.jpg "class="foto">
-                    <br><br><br>
+        <div class="col-md-6 p-4 ps-md-0">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@stilo_belleza.lt" data-unique-id="stilo_belleza.lt" data-embed-from="embed_page" data-embed-type="creator" style="max-width:780px; min-width:288px;"> <section> <a target="_blank" href="https://www.tiktok.com/@stilo_belleza.lt?refer=creator_embed">@stilo_belleza.lt</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
-    
-        <div>
-            <h2><a id="formulario">REGISTRO:</a></h2>
-            <form>
-                Id: <br>
-                <input type="text" name="id" value="id" disabled=""> <br>
-                Nombre: <br>
-                <input type="text" name="nombre"  maxlength="10" > <br>
-                Apellido: <br>
-                <input type="text" name="apellido" > <br>
-                Email:  <br>
-                <input type="text" name="email" > <br>
-                Telefono:   <br>
-                <input type="text" name="telefono" > <br>   
-        
-                    </select>  
-                    <br>
-                Descripción: <br>
-                <textarea name="descripcióm"  rows="5" cols="40"></textarea> <br><br>
-                selecione un sexo: <br><br>
-                <input type="radio" name="sexo" value="masculino ">masculino
-                <input type="radio" name="sexo" value="femenino ">femenino
-                <input type="radio" name="sexo" value="otro ">otro
-                <br><br>
-                <input type="submit" value="enviar ">
-            </form>
-        </div>
-    </div>
-<br><br>
+      </div>
     <footer>
-
-        <div>
+      <div>
+        <a href="#menu">
             <h2><a id="contactanos">CONTACTANOS:</a></h2>
             <br><br>
         <main>
                 <h3>REDES SOCIALES</h3>
                 <br>
-                    <a href="https://www.facebook.com/"><img src="facebook.png" alt=""class="redes" > FACEBOOK</a>
-                    <a href="https://web.whatsapp.com/"><img src="whatsApp.png" alt=""class="redes" >  WHATSAPP</a>
-                    <a href="https://www.instagram.com/"><img src="Instagram.png"" alt=""class="redes" > INSTAGRAM</a>
+                    <a href="https://www.facebook.com/people/Yudy-Alvarez-Stilobelleza/61555637188583/?mibextid=ZbWKwL"><img src="./img/facebook.png" alt=""class="redes" > FACEBOOK</a>
+                    <a href="https://web.whatsapp.com/"><img src="./img/whatsApp.png" alt=""class="redes" >  WHATSAPP</a>
+                    <a href="https://www.instagram.com/stilo_belleza_3/"><img src="./img/Instagram.png"" alt=""class="redes" > INSTAGRAM</a>
         </main>
     </div>
 

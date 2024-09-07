@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LT ACCESORIOS</title>
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+<script src="/js/jquery-3.7.1.min.js" defer></script>
+<script src="/js/popper.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+</head>
+<body style="background-color: #FF00FF;">
+
+
+    <h2>Stilo & Belleza LT</h2>
+    
+       <!-- <div id="nav">   
+        <ul  id="menu">
+            <li>  <img src="/logo.png" alt="" class="menu-icono" width="120" height="100px">
+            </li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contactanos">Concactanos</a></li>
+            <li><a href="#formulario">Registro</a></li>
+        </ul>
+       </div>
+        <br> -->
+          <!-- Barra de navegacion  con clase de bootrasp para el diseño  y expancion-->
+
+          <nav class="navbar navbar-expand-lg" style="background-color:#b60087;">
+            <!-- Contenedor fluido para ajustar el contenido de la barra de navegacion -->
+             <div class="container-fluid" id="menu">
+            <!-- Marca o logotipo que aparece en la barra de navegacion -->
+             <a class="navbar-brand" href="#menu">MENU</a> 
+             <!-- Boton que aparece en pantallas pequeñas para colapsar y expandir el menú -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenedor colapsable que contiene los elementos de navegacion -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- Lista de elementos de navegacion -->
+                     <ul class="navbar-nav">
+                        <!-- Elemento de navegacion: enlace a una pagina de inicio -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"  href="inicio.html">Inicio</a>
+                        </li>
+                        <!-- Elemento de navegacion: enlace a una pagina de Servicios-DAMA -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="hombre.html">Caballeros</a>
+                        </li>
+                         <!-- Elemento de navegacion: enlace a una pagina de servicios-HOGAR -->
+                         <li class="nav-item">
+                            <a class="nav-link active" href="dama.html">Damas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="hogar.html">Hogar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#contactanos">Accesosrios</a>
+                        </li>
+                     </ul>
+                </div>
+             </div>
+                       <!-- Modal(popup) o ventana emergente -->
+      <!-- Botón para disparar (trigger) la ventana Modal  -->
+
+       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ejemplomodal" >Ingreso</button>
+       
+       <!-- contenedor principal   que tiene la clase modal y otras propiedades bootstrap  -->
+        <div class="modal" id="ejemplomodal" tabindex="-1" aria-labelledby="ejemplomodal" aria-hidden="true">
+
+         <!-- contenedor para centrar el contenido en la pantalla -->
+            <div class="modal-dialog">
+                <!-- cotenetenor que envuelve el contenido de la modal (cabecera,cuerpo y pie) -->
+                <div class="modal-content">
+                    <!-- cabecera del modal de incluye y el boton de cierre -->
+                    <div class="modal-header">
+                        <!-- titulo del modal con estilo -->
+                         <h1 class="modal-title" id="ejemplomodallabel">Inicio Sesión</h1>
+                         <button type="button" class="btn btn-close" data-bs-toggle="modal" aria-label="cerrar"></button>
+
+                    </div>
+                    <!-- area donde  se coloca en contenido principla del modal  -->
+                        <div class="modal-body">
+                            <!-- colocar contenido  -->
+
+                        </div>
+                        <!-- sección final del modal -->
+                        <div class="modal-body">
+                            <!-- colocar contenido  -->
+                            <div class="inicio">
+                                <h2><a id="formulario">Inicio de sesión:</a></h2>
+                                <form>
+                                    USUARIO: <br>
+                                    <input type="text" name="usuario"  maxlength="10" > <br>
+                                   
+                                    Contraseña  <br>
+                                    <input type="password" name="contraseña" > <br>
+                                    <button type="button"class="btn btn-info" data-bs-dismiss="modal"><a href="#">INICIO</a></button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- colocar contenido  -->
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cierre</button>
+
+                        </div>
+                </div>
+             </div>
+    </div>
+       
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">REGISTRO</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Regristro</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="registro" class="registro">
+                <h2><a id="formulario">REGISTRO:</a></h2>
+                <form>
+                    Id: <br>
+                    <input type="text" name="id" value="id" disabled=""> <br>
+                    Nombre: <br>
+                    <input type="text" name="nombre"  maxlength="10" > <br>
+                    Apellido: <br>
+                    <input type="text" name="apellido" > <br>
+                    Email:  <br>
+                    <input type="text" name="email" > <br>
+                    Telefono:   <br>
+                    <input type="text" name="telefono" > <br>   
+            
+                        </select>  
+                        <br> <br>
+                    selecione un sexo: <br><br>
+                    <input type="radio" name="sexo" value="masculino ">masculino
+                    <input type="radio" name="sexo" value="femenino ">femenino
+                    <input type="radio" name="sexo" value="otro ">otro
+                    <br><br>
+                     <button type="button"class="btn btn-info" data-bs-dismiss="modal"><a href="#">Exito</a></button>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cierre</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</nav>
+
+
+        <p><a href="#menu"></a></p>
+            
+        <h1><a id="productos">ACCESORIOS</a></h1>
+        <br><br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-10">
+                <img src="./img/h.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hermosas pinzas </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-10">
+                <img src="./img/13.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hermosas tintas</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-10">
+                <img src="./img/15.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hermosos bolsos</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-10">
+                <img src="./img/33.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hermosos Anillos</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card h-10">
+                  <img src="./img/28.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermoso Gorro para el Friz</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/14.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermosas Moñas</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/kenn.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Maquina de Afeitar</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/kit.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Kit completo de Caballero</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/Audifono.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermosos Audinofonos</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/candela.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"> ENCENDEDOR ELECTRICO</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/pareja.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Relojes de pareja</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/secador.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermoso secador</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/tarro.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermoso Tarro</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/vidi.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermosa Consola GAME 6,5"</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-10">
+                  <img src="./img/vaper.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hermoso vaper </h5>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+
+</body>
+</html>
